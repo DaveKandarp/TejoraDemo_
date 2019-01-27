@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="@color/white"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/button_ok"
+                android:visibility="invisible"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@drawable/ic_done"
+                android:gravity="center"
+                android:paddingLeft="2dp"
+                android:paddingRight="2dp"
+                android:textColor="@android:color/white" />
+
+
+            <TextView
+                android:id="@+id/trip_title"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Add Stay Event"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Title"
+                android:textColor="@android:color/white" />
+
+            <ImageButton
+                android:id="@+id/button_close"
+                android:layout_width="?attr/actionBarSize"
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:rotation="45"
+                app:srcCompat="@drawable/ic_add"
+                tools:ignore="VectorDrawableCompat" />
+
+
+        </LinearLayout>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/nested_scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        android:scrollingCache="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:orientation="vertical">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/act_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Add Description"
+                android:imeOptions="flagNoExtractUi"
+                android:maxLines="2"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textColorHint="@color/cardview_shadow_start_color"
+                android:textSize="15dp" />
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusable="false"
+                android:hint="Address"
+                android:maxLines="2"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textColorHint="@color/cardview_shadow_start_color"
+                android:textSize="15dp" />
+
+            <Button
+                android:id="@+id/location_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:background="@drawable/shape_view"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="10dp"
+                android:text="Get Current Location" />
+            <LinearLayout
+                android:layout_margin="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <Button
+                    android:background="@drawable/button_shape"
+                    android:id="@+id/add_destination"
+                    android:text="ADD Destination"
+                    android:textColor="@color/white"
+                    android:fontFamily="sans-serif"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content" />
+                <Button
+                    android:id="@+id/add_activity"
+                    android:background="@drawable/button_shape"
+                    android:text="ADD Stay Activity"
+                    android:textColor="@color/white"
+                    android:fontFamily="sans-serif"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+</LinearLayout>
